@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useReducer} from 'react';
 import './App.css';
+import {fontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faFemale} from '@fortawesome/free-solid-svg-icons';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {
+    BrowserRouter,
+    Switch,
+    Route
+} from 'react-router-dom';
+
+  import Links from './section/Links/Links';
+  import SwitchComponent from './section/SwitchComponents/SwitchComponents';
+
+
+const App = () => {
+  
+    return (
+        <div>
+            <h1 className="title">RUTINA DE 5 DIAS</h1>
+            <fontAwesomeIcon icon ={faFemale} />
+             <BrowserRouter>
+                <Links />
+                <SwitchComponent />
+            </BrowserRouter>
+        </div>
+       
+    
+    );
 }
-
 export default App;

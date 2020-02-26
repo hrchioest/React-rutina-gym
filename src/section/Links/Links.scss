@@ -1,0 +1,21 @@
+.nav a {
+    display: inline-block;
+    padding: 5px; 
+    position: relative;
+    margin: 10px;
+    text-decoration: none;
+   
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    background: #060670;
+    color: white;
+    border-radius: 4px;
+}
+a:hover{
+    background: blue;
+}
