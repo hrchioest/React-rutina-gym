@@ -18,7 +18,7 @@ const App = () => {
     return (
         <div>
             <h1 className="title">RUTINA DE 5 DIAS</h1>
-            <fontAwesomeIcon icon ={faFemale} />
+            <fontAwesomeIcon />
              <BrowserRouter>
                 <Links />
                 <SwitchComponent />

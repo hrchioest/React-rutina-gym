@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Rutina.scss';
 
 
 
 const Rutina = props =>{
-
+    
 
     return (
         <div className={props.type}>
@@ -16,6 +16,7 @@ const Rutina = props =>{
                         <th className="fila">Series</th>
                         <th className="fila">Repeticiones</th>
                         <th className="fila">Descanso</th>
+                        <th className="fila">Opción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,11 +27,20 @@ const Rutina = props =>{
                                 <td>{serie.series}</td>
                                 <td>{serie.repeticiones}</td>
                                 <td>{serie.descanso}</td>
+                                <td><button className="delete">{serie.eliminar}Eliminar</button></td>
                             </tr>
                         )
                     })}
                 </tbody>
             </table>
+            <div className="modalAdd">
+                <h1>Add ejercicio a la rutina</h1>
+                <input className="input" placeholder="ejercicio"></input>
+                <input className="input"placeholder="series"></input>
+                <input className="input"placeholder="repeticiones"></input>
+                <input className="input"placeholder="descanso"></input>
+                <button className="add">Add</button>
+            </div>
         </div>
     );
 }
