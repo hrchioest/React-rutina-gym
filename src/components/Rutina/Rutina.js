@@ -5,7 +5,7 @@ import './Rutina.scss';
 
 const Rutina = props =>{
     
-
+ 
     return (
         <div className={props.type}>
             <h1 className="title">{props.title}</h1>
@@ -33,14 +33,7 @@ const Rutina = props =>{
                     })}
                 </tbody>
             </table>
-            <div className="modalAdd">
-                <h1>Add ejercicio a la rutina</h1>
-                <input className="input" placeholder="ejercicio"></input>
-                <input className="input"placeholder="series"></input>
-                <input className="input"placeholder="repeticiones"></input>
-                <input className="input"placeholder="descanso"></input>
-                <button className="add">Add</button>
-            </div>
+
         </div>
     );
 }

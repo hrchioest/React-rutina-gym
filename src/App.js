@@ -1,29 +1,40 @@
-import React, {useState, useReducer} from 'react';
+import React, {useReducer} from 'react';
 import './App.css';
+import initialState from './initialState';
 import {fontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faFemale} from '@fortawesome/free-solid-svg-icons';
 
-import {
-    BrowserRouter,
-    Switch,
-    Route
-} from 'react-router-dom';
-
-  import Links from './section/Links/Links';
-  import SwitchComponent from './section/SwitchComponents/SwitchComponents';
+import Modal from './components/Modal/Modal';
+import RutinasContext from './RutinasContext';
+import { BrowserRouter } from 'react-router-dom';
+import Links from './section/Links/Links';
+import SwitchComponent from './section/SwitchComponents/SwitchComponents';
 
 
 const App = () => {
-  
+
+    const reducer = (state, action) => {
+        switch (action.type) {
+            case 'add':
+                return { rutinas: [...state.rutinas, action.payload] };
+            default:
+                throw new Error();
+        }
+    }
+
+    const [state, dispatch] = useReducer(reducer, initialState);
+
     return (
-        <div>
-            <h1 className="title">RUTINA DE 5 DIAS</h1>
-            <fontAwesomeIcon />
-             <BrowserRouter>
-                <Links />
-                <SwitchComponent />
-            </BrowserRouter>
-        </div>
+        <RutinasContext.Provider value={ {state, dispatch} }>
+            <div>
+                <h1 className="title">RUTINA DE 5 DIAS</h1>
+                <fontAwesomeIcon />
+                <BrowserRouter>
+                    <Links />
+                    <SwitchComponent />
+                </BrowserRouter>
+                <Modal />
+            </div>
+        </RutinasContext.Provider>
        
     
     );

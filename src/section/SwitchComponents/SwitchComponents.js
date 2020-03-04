@@ -1,31 +1,57 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Switch, Route, Router} from 'react-router-dom';
-import Rutina1 from '../../components/Rutina1/Rutina1';
-import Rutina2 from '../../components/Rutina2/Rutina2';
-import Rutina3 from '../../components/Rutina3/Rutina3';
-import Rutina4 from '../../components/Rutina4/Rutina4';
-import Rutina5 from '../../components/Rutina5/Rutina5';
+import Rutina from '../../components/Rutina/Rutina';
+import RutinasContext from '../../RutinasContext';
 
 const SwitchComponent = () => {
+
+    const {state} = useContext(RutinasContext);
+
     return (
         <Switch>
-            <Route path="/rutina1" component={Rutina1} />
+            {
+                console.log(state.rutinas)
+            }
+            <Route path="/rutina1">
+                <Rutina
+                    type = "rutina1"
+                    title = "Rutina 1"
+                    rutina = { state.rutinas.filter(rutina => rutina.rutina === 1 ) }
+                />
+            </Route>
             
             <Route path="/rutina2">
-                <Rutina2>Rutina 2</Rutina2>
+                <Rutina
+                    type = "rutina2"
+                    title = "Rutina 2"
+                    rutina = { state.rutinas.filter(rutina => rutina.rutina === 2 ) }
+                />
             </Route>
             
             <Route path ="/rutina3">
-                <Rutina3>Rutina 3</Rutina3>
+                <Rutina
+                    type = "rutina3"
+                    title = "Rutina 3"
+                    rutina = { state.rutinas.filter(rutina => rutina.rutina === 3 ) }
+                />
             </Route>
 
             <Route path ="/rutina4">
-                <Rutina4>Rutina 4</Rutina4>
+                <Rutina
+                    type = "rutina4"
+                    title = "Rutina 4"
+                    rutina = { state.rutinas.filter(rutina => rutina.rutina === 4 ) }
+                />
             </Route>
-            <Route path ="/rutina5" component ={Rutina5} />
-             
 
-            
+            <Route path ="/rutina5">
+                <Rutina
+                    type = "rutina5"
+                    title = "Rutina 5"
+                    rutina = { state.rutinas.filter(rutina => rutina.rutina === 5 ) }
+                />
+            </Route>
+
         </Switch>
     )
 };
