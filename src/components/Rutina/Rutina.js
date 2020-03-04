@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useReducer, useContext } from 'react';
+import RutinasContext from '../../RutinasContext';
 import './Rutina.scss';
 
 
 
 const Rutina = props =>{
     
- 
+    const { state, dispatch } = useContext(RutinasContext);
+
+    
     return (
         <div className={props.type}>
             <h1 className="title">{props.title}</h1>
@@ -27,7 +30,7 @@ const Rutina = props =>{
                                 <td>{serie.series}</td>
                                 <td>{serie.repeticiones}</td>
                                 <td>{serie.descanso}</td>
-                                <td><button className="delete">{serie.eliminar}Eliminar</button></td>
+                                <td><button onClick={e => dispatch({type: 'delete', payload: {rutina: serie.rutina, ejercicio: serie.ejercicio}})} className="delete">{serie.eliminar}Eliminar</button></td>
                             </tr>
                         )
                     })}

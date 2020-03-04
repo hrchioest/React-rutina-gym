@@ -2,7 +2,6 @@ import React, {useReducer} from 'react';
 import './App.css';
 import initialState from './initialState';
 import {fontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
 import Modal from './components/Modal/Modal';
 import RutinasContext from './RutinasContext';
 import { BrowserRouter } from 'react-router-dom';
@@ -13,9 +12,17 @@ import SwitchComponent from './section/SwitchComponents/SwitchComponents';
 const App = () => {
 
     const reducer = (state, action) => {
+
         switch (action.type) {
             case 'add':
                 return { rutinas: [...state.rutinas, action.payload] };
+            case 'delete':
+                const clon = {...state};
+                //rutina y ejercicio
+                // action.payload.rutina , action.payload.ejercicio
+                const index = clon.rutinas.findIndex(rut => rut.rutina === action.payload.rutina && rut.ejercicio === action.payload.ejercicio);
+                clon.rutinas.splice(index, 1);
+                return clon;
             default:
                 throw new Error();
         }
