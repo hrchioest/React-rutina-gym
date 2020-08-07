@@ -3,12 +3,13 @@ th, td{
 }
 table{
     border-spacing: 0px;
+    
    
 }
 .delete{
-    background: brown;
+   
     border-radius: 5px;
-    color: white;
+    color: red;
 }
 
 .table{
@@ -16,8 +17,13 @@ table{
     text-align: center;
     box-shadow: 0 0 5px #666; 
     border: 20px solid white;
-    margin: 30px 400px 30px 379px;
+    margin: auto;
+    margin-top: 10px;
     font-size: 20px;
+    background: white;
+        @media (max-width: 767px) {
+            border: 8px solid white;
+        }
 
     
 }
@@ -26,10 +32,19 @@ table{
     padding: 15px;
     background: #dad6d6;
     border-radius: 4px;
+    
+        @media (max-width: 767px) {
+        font-size: 16px;
+        }
 }
 .title{
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 30px;
+    font-size: 38px;
+    @media (max-width: 767px) {
+        font-size:28px;
+        padding-top: 10px;
+        }
 }

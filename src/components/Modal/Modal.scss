@@ -1,10 +1,19 @@
+h1{
+    font-size: 30px;
+    @media (max-width: 767px) {
+       background-color: white;
+    }
+}
 .modalAdd{
     border: 1px solid black;
     text-align: center;
     box-shadow: 0 0 5px #666; 
     border: 20px solid white;
-    margin: 55px 300px 30px 300px;
     font-size: 20px;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 12px;
 }
 
 .add{
@@ -13,7 +22,13 @@
     color: white;
     height: 30px;
     width: 50px;
+    margin-top: 10px;
 }
 .input{
     margin: 5px;
+    padding: 5px;
+}
+.wrapper-data{
+    display: flex;
+    flex-direction: column;
 }

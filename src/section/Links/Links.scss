@@ -1,21 +1,40 @@
 .nav a {
     display: inline-block;
-    padding: 5px; 
+    padding: 10px; 
     position: relative;
-    margin: 10px;
     text-decoration: none;
-   
+    font-size: 22px;
+    margin: 5px;
+    @media (max-width: 767px) {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0px;
+    }
+}
+.nav{
+    background-color:#392e68;
+    border-radius: 12px;
+    padding: 10px;
+    @media (max-width: 767px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 .wrapper{
     display: flex;
     justify-content: center;
+    @media (max-width: 767px) {
+        justify-content: flex-end;
+    }
 }
 
 a{
-    background: #060670;
+    
     color: white;
     border-radius: 4px;
 }
-a:hover{
-    background: blue;
+
+.active{
+    background:#e93f38;
 }

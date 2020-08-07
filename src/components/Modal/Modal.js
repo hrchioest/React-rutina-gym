@@ -1,46 +1,67 @@
-import React, { useReducer, useContext } from 'react';
-import './Modal.scss'
-import RutinasContext from '../../RutinasContext';
+import React, { useReducer, useContext } from "react";
+import "./Modal.scss";
+import RutinasContext from "../../RutinasContext";
 
-const Modal = props =>{
+const Modal = (props) => {
+  const { state, dispatch } = useContext(RutinasContext);
 
-    const { state, dispatch } = useContext(RutinasContext);
+  let data = {
+    day: null,
+    exercise: null,
+    series: null,
+    break: null
+  };
 
-    let data = {
-        rutina: null,
-        ejercicio:null,
-        series:null,
-        repeticiones:null,
-        descanso:null,
-    };
+  const setDataInput = (event) => {
+    let { name, value } = event.target;
 
-    const setDataInput = event =>{
-        let { name, value } = event.target;
+    data = { ...data, [name]: value };
+  };
+  const add = () => {
+    dispatch({ type: "add", payload: data });
+  };
 
-        if(name === 'rutina'){
-            value = parseInt(value);
-        }
-
-        data = {...data, [name]:value};
-        console.log(data);
-    }
-    const add = () => {
-        dispatch({type:"add", payload: data} );
-    }
-
-    return(
-
-        <div className="modalAdd">
-            <h1>Add ejercicio a la rutina</h1>
-            <input className="input" name="rutina" placeholder="rutina" onChange={setDataInput}></input>
-            <input className="input" name="ejercicio" placeholder="ejercicio"onChange={setDataInput}></input>
-            <input className="input" name="series" placeholder="series" onChange={setDataInput}></input>
-            <input className="input" name="repeticiones" placeholder="repeticiones" onChange={setDataInput}></input>
-            <input className="input" name="descanso" placeholder="descanso" onChange={setDataInput}></input>
-            <button onClick ={add} className="add">Add</button>
-        </div>
-    )
-}
+  return (
+    <div className='modalAdd'>
+      <h1>Add excercise</h1>
+      <div className="wrapper-data">
+        <select
+          className='input'
+          name='day'  
+          onChange={setDataInput}
+        >
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="friday">Friday</option>
+          
+        </select>
+        
+          <input
+            className='input'
+            name='exercise'
+            placeholder='exercise'
+            onChange={setDataInput}
+          ></input>
+          <input
+            className='input'
+            name='series'
+            placeholder='Series'
+            onChange={setDataInput}
+          ></input>
+          <input
+            className='input'
+            name='break'
+            placeholder='Break'
+            onChange={setDataInput}
+          ></input>
+          <button onClick={add} className='add'>
+            Add
+          </button>
+      </div>
+    </div>
+  );
+};
 
 export default Modal;
-            
