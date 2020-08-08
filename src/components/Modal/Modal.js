@@ -30,6 +30,7 @@ const Modal = (props) => {
           name='day'  
           onChange={setDataInput}
         >
+          <option selected="true" disabled="disabled">Select day</option>
           <option value="monday">Monday</option>
           <option value="tuesday">Tuesday</option>
           <option value="wednesday">Wednesday</option>
@@ -37,7 +38,6 @@ const Modal = (props) => {
           <option value="friday">Friday</option>
           
         </select>
-        
           <input
             className='input'
             name='exercise'

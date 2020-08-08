@@ -18,9 +18,9 @@ const Rutina = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.rutina.map((serie) => {
+          {props.rutina.map((serie, key) => {
             return (
-              <tr key={serie.day}>
+              <tr key={key}>
                 <td>{serie.exercise}</td>
                 <td>{serie.series}</td>
                 <td>{serie.break}</td>
