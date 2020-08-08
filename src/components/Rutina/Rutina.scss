@@ -1,5 +1,5 @@
 th, td{
-    border :1px solid black;
+    border :1px solid #d2b8b8;
 }
 table{
     border-spacing: 0px;
@@ -15,7 +15,6 @@ table{
 .table{
     border: 1px solid black;
     text-align: center;
-    box-shadow: 0 0 5px #666; 
     border: 20px solid white;
     margin: auto;
     margin-top: 10px;
@@ -30,11 +29,13 @@ table{
 .fila{
     border-bottom: 1px solid #bcb3b3;
     padding: 15px;
-    background: #dad6d6;
+    background: #564e7d;
     border-radius: 4px;
+    color: white;
+    font-weight: 300;
     
         @media (max-width: 767px) {
-        font-size: 16px;
+        font-size: 17px;
         }
 }
 .title{

@@ -1,26 +1,30 @@
-h1{
+h2{
     font-size: 30px;
+    margin: 5px 0px 15px 0px;
     
 }
 .modalAdd{
     border: 1px solid black;
     text-align: center;
-    box-shadow: 0 0 5px #666; 
+    box-shadow: 0 0 2px #666; 
     border: 20px solid white;
     font-size: 20px;
     width: 250px;
     margin: auto;
     margin-bottom: 15px;
     margin-top: 12px;
+    background: white;
 }
 
 .add{
-    background: green;
+    background: #1c8c2b;
     border-radius: 4px;
     color: white;
-    height: 30px;
-    width: 50px;
+    height: 50px;
+    width: 8;
     margin-top: 10px;
+    font-size: 20px;
+    border: aliceblue;
 }
 .input{
     margin: 5px;

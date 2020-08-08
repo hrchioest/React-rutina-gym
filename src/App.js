@@ -1,8 +1,6 @@
 import React, { useReducer } from "react";
 import "./App.css";
 import initialState from "./initialState";
-import { fontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Modal from "./components/Modal/Modal";
 import RutinasContext from "./RutinasContext";
 import { BrowserRouter } from "react-router-dom";
 import Links from "./section/Links/Links";
@@ -12,6 +10,8 @@ const App = () => {
   const reducer = (state, action) => {
     switch (action.type) {
       case "add":
+        console.log("state when add ... ", state);
+        console.log("payload .. ", action.payload);
         return { rutinas: [...state.rutinas, action.payload] };
       case "delete":
         const clon = { ...state };
@@ -34,13 +34,11 @@ const App = () => {
   return (
     <RutinasContext.Provider value={{ state, dispatch }}>
       <div>
-        <h1 className='title'>GYM - EXERCISE ROUTINE</h1>
-        <fontAwesomeIcon />
+        <h1 className="title">GYM - EXERCISE ROUTINE</h1>
         <BrowserRouter>
           <Links />
           <SwitchComponent />
         </BrowserRouter>
-        <Modal />
       </div>
     </RutinasContext.Provider>
   );

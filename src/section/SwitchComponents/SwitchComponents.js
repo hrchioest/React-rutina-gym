@@ -1,49 +1,50 @@
 import React, { useContext } from "react";
-import { Switch, Route, Router } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Rutina from "../../components/Rutina/Rutina";
 import RutinasContext from "../../RutinasContext";
 
 const SwitchComponent = () => {
   const { state } = useContext(RutinasContext);
-
-  console.log(state);
   return (
     <Switch>
-      <Route path='/dayMonday'>
+      <Route path="/monday">
         <Rutina
-          type='day'
-          rutina={state.rutinas.filter((day) => day.day === 'monday')}
+          day="monday"
+          type="day"
+          rutina={state.rutinas.filter((day) => day.day === "monday")}
         />
       </Route>
-      <Route path='/dayTuesday'>
+      <Route path="/tuesday">
         <Rutina
-          type='day'
-          rutina={state.rutinas.filter((day) => day.day === 'tuesday')}
-        />
-      </Route>
-
-      <Route path='/dayWednesday'>
-        <Rutina
-          type='day'
-          rutina={state.rutinas.filter((day) => day.day === 'wednesday')}
+          day="tuesday"
+          type="day"
+          rutina={state.rutinas.filter((day) => day.day === "tuesday")}
         />
       </Route>
 
-      <Route path='/dayThurday'>
+      <Route path="/wednesday">
         <Rutina
-          type='day'
-          rutina={state.rutinas.filter((day) => day.day === 'tuesday')}
+          day="wednesday"
+          type="day"
+          rutina={state.rutinas.filter((day) => day.day === "wednesday")}
         />
       </Route>
 
-      <Route path='/dayFriday'>
+      <Route path="/thursday">
         <Rutina
-          type='day'
-          title='friday'
-          rutina={state.rutinas.filter((day) => day.day === 'friday')}
+          day="thursday"
+          type="day"
+          rutina={state.rutinas.filter((day) => day.day === "thursday")}
         />
       </Route>
-     
+
+      <Route path="/friday">
+        <Rutina
+          day="friday"
+          type="day"
+          rutina={state.rutinas.filter((day) => day.day === "friday")}
+        />
+      </Route>
     </Switch>
   );
 };
