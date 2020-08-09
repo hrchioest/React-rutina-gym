@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "98cce2e0103efaf352e423d82a2c7ffe",
+    "revision": "2307b0dfcc3ab5a3fc1475f05b15d204",
     "url": "/React-rutina-gym/index.html"
   },
   {
-    "revision": "aefd107a55916dc385fe",
+    "revision": "8e89cd5fc8b2ad810df6",
     "url": "/React-rutina-gym/static/css/main.ee31f99e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/React-rutina-gym/static/js/2.6e825bf4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aefd107a55916dc385fe",
-    "url": "/React-rutina-gym/static/js/main.70d1def4.chunk.js"
+    "revision": "8e89cd5fc8b2ad810df6",
+    "url": "/React-rutina-gym/static/js/main.de60a92a.chunk.js"
   },
   {
     "revision": "9aa0f7b723ce8306392c",
