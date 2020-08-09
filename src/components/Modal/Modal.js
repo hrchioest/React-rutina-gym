@@ -47,6 +47,7 @@ const Modal = ({ day }) => {
         ></input>
         <input
           value={values.series}
+          type= "number"
           className="input"
           name="series"
           placeholder="Series"
