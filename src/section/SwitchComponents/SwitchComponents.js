@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Rutina from "../../components/Rutina/Rutina";
 import RutinasContext from "../../RutinasContext";
 
@@ -7,6 +7,9 @@ const SwitchComponent = () => {
   const { state } = useContext(RutinasContext);
   return (
     <Switch>
+      <Route exact path="/">
+        <Redirect to="/monday" />
+      </Route>
       <Route path="/monday">
         <Rutina
           day="monday"

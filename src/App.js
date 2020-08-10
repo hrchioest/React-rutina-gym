@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import "./App.css";
 import initialState from "./initialState";
 import RutinasContext from "./RutinasContext";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Links from "./section/Links/Links";
 import SwitchComponent from "./section/SwitchComponents/SwitchComponents";
 
@@ -35,10 +35,10 @@ const App = () => {
     <RutinasContext.Provider value={{ state, dispatch }}>
       <div>
         <h1 className="title">GYM - EXERCISE ROUTINE</h1>
-        <BrowserRouter>
+        <HashRouter>
           <Links />
           <SwitchComponent />
-        </BrowserRouter>
+        </HashRouter>
       </div>
     </RutinasContext.Provider>
   );
