@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2307b0dfcc3ab5a3fc1475f05b15d204",
+    "revision": "d890f7afff247c1229cc878e22e75d05",
     "url": "/React-rutina-gym/index.html"
   },
   {
-    "revision": "8e89cd5fc8b2ad810df6",
+    "revision": "4f4e8e8272b6f7713d90",
     "url": "/React-rutina-gym/static/css/main.ee31f99e.chunk.css"
   },
   {
-    "revision": "2d6a91fa5c73bffd55d2",
-    "url": "/React-rutina-gym/static/js/2.6e825bf4.chunk.js"
+    "revision": "a653798cc51a2fc08eac",
+    "url": "/React-rutina-gym/static/js/2.9c377a92.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/React-rutina-gym/static/js/2.6e825bf4.chunk.js.LICENSE.txt"
+    "url": "/React-rutina-gym/static/js/2.9c377a92.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e89cd5fc8b2ad810df6",
-    "url": "/React-rutina-gym/static/js/main.de60a92a.chunk.js"
+    "revision": "4f4e8e8272b6f7713d90",
+    "url": "/React-rutina-gym/static/js/main.86ad5063.chunk.js"
   },
   {
     "revision": "9aa0f7b723ce8306392c",
